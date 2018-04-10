@@ -7,14 +7,14 @@ from sklearn.preprocessing import MinMaxScaler
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # Load training data set from CSV file
-training_data_df = pd.read_csv("sales_data_training.csv", dtype=float)
+training_data_df = pd.read_csv("/home/desaiankitb/Code/TensorFlow_beginners/04/sales_data_training.csv", dtype=float)
 
 # Pull out columns for X (data to train with) and Y (value to predict)
 X_training = training_data_df.drop('total_earnings', axis=1).values
 Y_training = training_data_df[['total_earnings']].values
 
 # Load testing data set from CSV file
-test_data_df = pd.read_csv("sales_data_test.csv", dtype=float)
+test_data_df = pd.read_csv("/home/desaiankitb/Code/TensorFlow_beginners/04/sales_data_test.csv", dtype=float)
 
 # Pull out columns for X (data to train with) and Y (value to predict)
 X_testing = test_data_df.drop('total_earnings', axis=1).values
